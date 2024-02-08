@@ -217,6 +217,19 @@ html.textomaior {
   display: block;
   animation: slidedown 0.5s forwards;
 }
+.js [data-dia]::after{
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-left: 4px;
+}
+.js [data-dia].aberto::after{
+  background: green;
+}
 @keyframes slidedown {
   from {
     opacity: 0;
