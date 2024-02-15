@@ -217,9 +217,9 @@ html.textomaior {
   display: block;
   animation: slidedown 0.5s forwards;
 }
-.js [data-dia]::after{
+.js [data-dia]::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   background: red;
@@ -227,8 +227,14 @@ html.textomaior {
   border: 2px solid #000;
   margin-left: 4px;
 }
-.js [data-dia].aberto::after{
+.js [data-dia].aberto::after {
   background: green;
+}
+.btc-preco {
+  background: #3fa;
+  padding: .2rem .5rem;
+  font-weight: bold;
+  border-radius: 2px;
 }
 @keyframes slidedown {
   from {
