@@ -9,6 +9,7 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import initAberto from "./modules/aberto.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
+
 initScrollSuave();
 initAnimaScroll();
 initAccordion();
