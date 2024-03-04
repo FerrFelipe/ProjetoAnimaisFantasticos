@@ -41,5 +41,5 @@ menuMobile.init();
 const aberto = new Aberto("[data-semana]", "aberto");
 aberto.init();
 
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
