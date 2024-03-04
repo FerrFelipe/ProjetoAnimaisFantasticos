@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
-import initAberto from "./modules/aberto.js";
+import Aberto from "./modules/aberto.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 import ScrollAnima from "./modules/scroll-anima.js";
@@ -27,7 +27,6 @@ const modal = new Modal(
 modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
-
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 const dropdownMenu = new DropdownMenu("[data-dropdown]");
@@ -39,7 +38,8 @@ const menuMobile = new MenuMobile(
 );
 menuMobile.init();
 
-initAberto();
+const aberto = new Aberto("[data-semana]", "aberto");
+aberto.init();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");

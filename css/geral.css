@@ -217,7 +217,7 @@ html.textomaior {
   display: block;
   animation: slidedown 0.5s forwards;
 }
-.js [data-dia]::after {
+.js [data-semana]::after {
   display: inline-block;
   content: "";
   width: 6px;
@@ -227,7 +227,7 @@ html.textomaior {
   border: 2px solid #000;
   margin-left: 4px;
 }
-.js [data-dia].aberto::after {
+.js [data-semana].aberto::after {
   background: green;
 }
 .btc-preco {
