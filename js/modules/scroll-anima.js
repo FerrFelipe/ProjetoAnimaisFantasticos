@@ -1,8 +1,10 @@
+import debounce from "./debounce";
+
 export default class initAnimacaoScroll {
   constructor(section) {
     this.sections = document.querySelectorAll(section);
     this.windowMetade = window.innerHeight * 0.7;
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
   }
 
   getDistance() {
@@ -33,7 +35,7 @@ export default class initAnimacaoScroll {
     }
     return this;
   }
-  
+
   stop() {
     window.removeEventListener("scroll", this.checkDistance);
   }
