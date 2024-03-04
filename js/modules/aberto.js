@@ -27,7 +27,6 @@ export default class initAberto {
 
   ativaAberto() {
     if (this.estaAberto()) {
-      console.log(this.estaAberto());
       this.funcionamento.classList.add(this.classe);
     }
   }
