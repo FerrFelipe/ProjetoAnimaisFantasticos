@@ -32,11 +32,7 @@ const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 const dropdownMenu = new DropdownMenu("[data-dropdown]");
 dropdownMenu.init();
-const menuMobile = new MenuMobile(
-  '[data-menu="button"]',
-  '[data-menu="list"]',
-  ["click"]
-);
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
 const aberto = new Aberto("[data-semana]", "aberto");
