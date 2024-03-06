@@ -10,6 +10,7 @@ export default class initAnimacaoScroll {
   getDistance() {
     this.distance = [...this.sections].map((section) => {
       const offset = section.offsetTop;
+      console.log(offset);
       return {
         element: section,
         offset: Math.floor(offset - this.windowMetade),
@@ -21,15 +22,14 @@ export default class initAnimacaoScroll {
     this.distance.forEach((item) => {
       if (window.scrollY > item.offset) {
         item.element.classList.add("ativo");
-      } else if (item.element.classList.contains("ativo")) {
+      } else if (item.element.classList.contains("ativo"))
         item.element.classList.remove("ativo");
-      }
     });
   }
 
   init() {
     if (this.sections.length) {
-      this.getDistance();
+      debounce(this.getDistance(), 300);
       this.checkDistance();
       window.addEventListener("scroll", this.checkDistance);
     }

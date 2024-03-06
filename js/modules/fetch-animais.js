@@ -16,11 +16,7 @@ export default function fetchAnimais(url, target) {
   }
 
   function animaAnimaisNumeros() {
-    const animaNumeros = new AnimaNumeros(
-      "[data-numero]",
-      ".numeros",
-      "ativo"
-    );
+    const animaNumeros = new AnimaNumeros("[data-numero]", ".numeros", "ativo");
     animaNumeros.init();
   }
 
